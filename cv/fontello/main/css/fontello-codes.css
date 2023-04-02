@@ -1,0 +1,5 @@
+
+.icon-user:before { content: '\e800'; } /* '' */
+.icon-chat:before { content: '\e801'; } /* '' */
+.icon-folder-open:before { content: '\e805'; } /* '' */
+.icon-lightbulb:before { content: '\f0eb'; } /* '' */
