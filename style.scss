@@ -1,0 +1,510 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap');
+$darkBlue: #010B40 ;
+$yellow: #f6d26a ;
+$mainOrange: #F27405 ;
+$orange: #F25C05 ;
+$white: #F0F2F1 ;
+
+$coolShadow: rgba(242, 116, 5, 0.4) 0px 5px, rgba(242, 116, 5, 0.3) 0px 10px, rgba(242, 116, 5, 0.2) 0px 15px, rgba(242, 116, 5, 0.1) 0px 20px, rgba(242, 116, 5, 0.05) 0px 25px;
+
+body{
+    background: $white;
+    font-family: 'Inconsolata', monospace;
+    overscroll-behavior: none;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+h3{
+    font-size: 43px;
+    font-family: 'Delicious Handrawn', cursive;
+    letter-spacing: 2px;
+    margin: 20px 0;
+    span{
+        text-transform: uppercase;
+    }
+}
+section{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+	width: 100%;
+    img, video{
+        width: 90vw;
+        margin: 25px 0;
+    }
+    > div{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 80vw;
+        img{
+            width: calc(40vw - 20px);
+        }
+    }
+}
+.scrollup{
+    font-size: 26px;
+    width: 64px;
+	height: 64px;
+	text-decoration: none;
+	position: fixed;
+	right: 50px;
+	bottom: 50px;
+    i{
+        color: $orange;
+    }
+}
+.header{
+    background: url("img/background-animation.svg") no-repeat;
+    background-size: cover;
+    nav{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        background-color: rgba($color: #F0F2F1, $alpha: .7);
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-end;
+        a{
+            text-decoration: none;
+            color: $orange;
+            text-transform: uppercase;
+            padding: 13px;
+            transition: all .3s;
+            &:hover{
+                font-weight: bold;
+                text-decoration: underline;
+            }
+        }
+    }
+    .mainContainer{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 100px;
+        img{
+            width: calc(30vw - 50px);
+        }
+        .text{
+            color: $white;
+            width: 40vw;
+            font-size: 18px;
+            a{
+                color: $white;
+                transition: .3s;
+                &:hover{
+                    color: $darkBlue;
+                }
+            }
+        }
+    }
+}
+.about{
+    background-color: $white;
+    h3{
+        color: $darkBlue;
+    }
+    .aboutInfo{
+        .allAboutMe{
+            line-height: 130%;
+            a{
+                color: $darkBlue;
+                &:hover{
+                    font-weight: 900;
+                }
+            }
+        }
+    }
+}
+.contactContainer{
+    background-color: $darkBlue;
+    h3{color: $white;}
+    .contact{
+        .daneContact{
+            display: flex;
+            flex-direction: column;
+            color: $white;
+            span{
+                font-weight: 700;
+                font-size: 24px;
+                padding: 25px 0;
+                a{
+                    font-weight: normal;
+                    color: $white;
+                    background-color: $orange;
+                    border: none;
+                    border-radius: 7px;
+                    padding: 7px 13px;
+                    text-decoration: none;
+                    transition: all .3s;
+                    &:hover, &:focus{
+                        box-shadow: $coolShadow;
+                        background-color: $mainOrange;
+                        transform:  translate(10px, 100px);
+                    }
+                }
+            }
+        }
+    }
+}
+.containerSkills{
+    background-color: $white;
+    h3{
+        margin-top: 50px;
+    }
+    .mainSkillsInfo{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 80vw;
+        img{
+            width: 30vw;
+        }
+        .skillsText{
+            a{
+                color: $mainOrange;
+                &:hover{
+                    color: $darkBlue;
+                }
+            }
+        }
+    }
+}
+section[class^="skill"], .gallery{
+	background-color: $white;
+}
+section[class^="skill"]{
+    h3{
+        font-size: 50px;
+        color: $orange
+    }
+    span{
+        margin: 20px 10%;
+        a{
+            color: $mainOrange;
+            &:hover{
+                color: $darkBlue;
+            }
+        }
+    }
+    h2{
+        color: $mainOrange;
+        margin-top: 90px;
+    }
+}
+.end-skills{
+    background-color: $mainOrange;
+    h3{
+        color: $white;
+    }
+    span{
+        margin: 20px 10%;
+        a{
+            color: $darkBlue;
+            &:hover{
+                color: $yellow;
+            }
+        }
+    }
+    .list{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70vw;
+        ul{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 7px 20px;
+            list-style: disc;
+            li{
+                color: $white;
+                font-size: 18px;
+            }
+        }
+    }
+}
+.end-gallery{
+    height: 100%;
+    margin: 50px 0;
+    .row{
+        display: grid;
+        grid-template-columns: repeat(4, 300px);
+        grid-template-rows: repeat(3, 150px);
+        gap: 10px;
+        .image{
+            cursor: pointer;
+            width: 300px;
+            height: 150px;
+            transition: all .3s;
+            opacity: 0.8;
+            background-color: #010B40;
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+    .container {
+      position: relative;
+      display: none;
+      .closebtn {
+        position: absolute;
+        top: 30px;
+        right: 15px;
+        color: white;
+        font-size: 35px;
+        cursor: pointer;
+      }
+    }
+}
+.galleries{
+    height: 100% !important;
+}
+
+
+.gallery{
+    #galleryView{
+        min-height: 640px;
+        width: 100%;
+        background: $white;
+        background: transparent;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        .navBtns{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: none;
+            position: absolute;
+            opacity: 0.8;
+            background-color: transparent;
+            cursor: pointer;
+            color: $orange;
+            z-index: 2;
+            &:hover{
+                opacity: 1;
+                transition: all 1s;
+                background-color: $mainOrange;
+                color: $white;
+            }
+        }
+        #navLeft {
+            left: 0;
+        }
+        #navRight {
+            right: 0;
+        }
+        #mainView{
+            height: 600px;
+            width: 1300px;  
+            border-radius: 5px;
+            background-color: $mainOrange;
+            margin-left: 10px;
+            margin-right: 10px;
+            z-index: 1;
+            transition: all 1s;
+            background-size: auto;
+            position: relative;
+            .title{
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                background: rgba($color: #010B40, $alpha: .7);
+                color: $white;
+                text-align: center;
+                padding: 11px 0;
+                font-size: 20px;
+                display: none;
+            }
+        }
+            
+    }
+}
+footer{
+    background-color: $darkBlue;
+    display: flex;
+    justify-content: flex-end;
+    a{
+        padding: 15px;
+        i{
+            cursor: pointer;
+            color: $white;
+            font-size: 22px;
+            &:hover{
+                color: $yellow;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 680px){
+    h3{
+        font-size: 43px;
+        margin: 20px 0;
+    }
+    section{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        > div{
+            display: flex;
+            flex-direction: column;
+            width: 90vw;
+            margin: 20px 0;
+            img{width: 70vw;}
+        }
+    }
+    .header{
+        .mainContainer{
+            display: flex;
+            flex-direction: column;
+            img{
+                width: 65vw;
+            }
+            .text{
+                width: 75vw;
+                margin-bottom: 20px;
+            }
+        }
+    }
+    .contactContainer{.contact{.daneContact{span{font-size: 16px;}}}}
+    section[class^="skill"]{
+        h3{font-size: 43px;}
+        h2{
+            font-size: 21px;
+            text-align: center;
+        }
+    }
+    .end-skills{
+        h3{font-size: 20px;}
+        .list{
+            ul{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    }
+    .end-gallery{
+        .row{
+            display: grid;
+            grid-template-columns: repeat(2, 150px);
+            grid-template-rows: repeat(6, 50px);
+            .image{
+                width: 150px;
+                height: 50px;
+            }
+        }
+    }
+    .gallery{
+        #galleryView{
+            min-height: 150px;
+            #mainView{
+                height: 600px;
+                width: 300px;  
+                .title{display: block;}
+            }    
+        }
+    }
+    footer{a{i{font-size: 16px;}}}
+}
+
+// animations
+.heartbeat {
+	-webkit-animation: heartbeat 2.5s ease-in-out both;
+	        animation: heartbeat 2.5s ease-in-out both;
+}
+/* ----------------------------------------------
+ * Generated by Animista on 2023-3-28 15:52:3
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation heartbeat
+ * ----------------------------------------
+ */
+ @-webkit-keyframes heartbeat {
+    from {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transform-origin: center center;
+              transform-origin: center center;
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    10% {
+      -webkit-transform: scale(0.91);
+              transform: scale(0.91);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    17% {
+      -webkit-transform: scale(0.98);
+              transform: scale(0.98);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    33% {
+      -webkit-transform: scale(0.87);
+              transform: scale(0.87);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    45% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+  }
+  @keyframes heartbeat {
+    from {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transform-origin: center center;
+              transform-origin: center center;
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    10% {
+      -webkit-transform: scale(0.91);
+              transform: scale(0.91);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    17% {
+      -webkit-transform: scale(0.98);
+              transform: scale(0.98);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    33% {
+      -webkit-transform: scale(0.87);
+              transform: scale(0.87);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    45% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+  }
+  

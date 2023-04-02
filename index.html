@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fontello/css/fontello.css">
+    <script src="https://kit.fontawesome.com/2c7fc28a2f.js"></script>
+    <link rel="icon" href="img/undraw_coffee_time_mwfm.svg" type="image/x-icon">
+    <title>Teresa Chrzan</title>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="jquery.scrollTo.min.js"></script>
+    <script>
+		jQuery(function($)
+		{
+			//zresetuj scrolla
+			$.scrollTo(0);
+			
+			$('#link1').click(function() { $.scrollTo($('#home'), 500); });
+			$('#link2').click(function() { $.scrollTo($('#about'), 500); });
+			$('#link3').click(function() { $.scrollTo($('#contact'), 500); });
+			$('#link4').click(function() { $.scrollTo($('#projects'), 500); });
+			$('#link5').click(function() { $.scrollTo($('#projects'), 500); });
+
+            $('.scrollup').click(function() { $.scrollTo($('body'), 1000); });
+		}
+		);
+        $(window).scroll(function()
+		{
+			if($(this).scrollTop()>300) $('.scrollup').fadeIn();
+			else $('.scrollup').fadeOut();		
+		}
+		);
+	</script>
+</head>
+
+<body>
+    <a href="#" class="scrollup"><i class="icon-up-open"></i></a>
+    <section class="header">
+        <nav>
+            <a id="link4" href="#">umiejętności</a>
+            <a id="link3" href="#">kontakt</a>
+            <a href="cv/cv.html" target="_blank">cv</a>
+        </nav>
+        <div class="mainContainer">
+            <img src="img/undraw_programmer_re_owql.svg" alt="programmer-img" class="heartbeat" >
+            <div class="text">
+                <h1>Witaj! Jesteś na mojej stronie!</h1><br>
+                <h2>Dowiesz się trochę o moim <a id="link5" href="#">umiejętnościach</a> oraz ogólnie <a id="link2" href="#">o mnie</a>!</h2>
+            </div>
+            
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <h3>trochę o MNIE</h3>
+
+        <div class="aboutInfo">
+            <div class="allAboutMe">
+                <p>Większość informacji znajdziesz w moim <a href="cv/cv.html" target="_blank">CV</a>!</p><br>
+                <p>Programować uczę się od technikum (2016), nauczyłam się wtedy podstaw <b>HTML, CSS oraz C++.</b> Dzięki kierunku technika cyfrowych procesów graficznych również znam dobrze <b>Adobe Photoshop, Illustrator oraz InDesign!</b> Dzięki temu nie tylko potrafię stworzyć stronę WWW pod kątem kodu, lecz również designu!</p><br>
+                <p>Podczas swojej krótkiej przygody ze studiami informatycznymi (zrezygnowałam na drugim roku) nauczyłam się podstaw <b>C#, PHP, MySQL,</b> co również doszkalałam w późniejszym czasie. <b>JavaScript</b> uczę się już od kilku miesięcy, lecz jest to dosyć mocno rozwinięty (i nadal rozwijany) język, zatem tego języka tak naprawdę uczy się na bieżąco. W tym czasie rónież mocno rozwinęłam swoją znajomość <b>HTML oraz CSS!</b></p>
+                <p><b>Animacje plików SVG</b> również nie są mi obce! Jak również ogólne tworzenie bądź animowanie różnego typu plików graficznych.</p>
+            </div>
+            <img src="img/undraw_personal_info_re_ur1n.svg" alt="personal-info" >
+        </div>
+    </section>
+
+    <section class="contactContainer" id="contact">
+        <h3>Kontakt</h3>
+
+        <div class="contact">
+            <img src="img/undraw_social_girl_re_kdrx.svg" alt="socials">
+            <div class="daneContact">
+                <span>e-mail: <a href="mailto:tereachrzan120100@gmail.com">tereachrzan120100@gmail.com</a></span>
+                <span>tel: <a href="tel:+48 609 778 592">609 778 592</a></span> 
+                <span>github: <a href="http://github.com/trschrzn" target="_blank">/trschrzn</a></span>
+            </div>
+        </div>
+    </section>
+
+    <section class="containerSkills" id="projects">
+        <h3>czas na <span>projekty</span></h3>
+
+        <div class="mainSkillsInfo">
+            <div class="skillsText">
+                <p>Wszystkie moje projekty są tworzone w HTML, CSS oraz JS. Od trzech miesięcy uczę się tworzyć z wykorzystaniem biblioteki React.js.</p>
+                <p>Projekty wykonałam od podstaw samodzielnie na potrzebę nauki, nie są aktywne, zdjęcia głównie zostały pobrane ze strony <a href="http://pinterest.com" target="_blank">pinterest</a> bądź są moje prywatne.</p>
+                <p>W swoich projektach często używam "icon fonts" <a href="http://fontello.com" target="_blank">fontello</a>.</p>
+            </div>
+            <img src="img/undraw_design_inspiration_re_tftx.svg" alt="design-inspiration">
+        </div>
+    </section>
+                
+    <section class="skill-frst">
+        <h3>Sklep internetowy: </h3>
+
+        <span>Jest to strona WWW sklepu internetowego "SklepAmatorski". Przy tworzeniu tego projektu wykorzystałam głównie HTML, CSS oraz JS.</span>
+        <span>Wszystkie pliki projektu można znaleźć na stronie: <a href="http://github.com/trschrzn/Little-shop">https://github.com/trschrzn/Little-shop</a></span>
+
+        <h2>Poniżej galeria zdjęć z projektu</h2>
+    </section>
+
+    <section class="gallery">
+        <div id="galleryView">
+            <button id="navLeft" class="navBtns"><i class="fas fa-arrow-left fa-3x"></i></button>
+            <div id="mainView"  onmousemove="viewAllTitle(event)" onmouseout="clearAllTitle(event)">
+                <div class="title" id="titleView"></div>
+            </div>
+            <button id="navRight" class="navBtns"><i class="fas fa-arrow-right fa-3x"></i></button>
+        </div>
+    </section>
+
+    <section class="skill-scnd">
+        <h3>Hotel RoyalPlace: </h3>
+
+        <span>Jest to strona WWW hotelu "RoyalPlace". Przy tworzeniu tego projektu wykorzystałam głównie HTML, CSS oraz JS. Strona bardzo dobrze się prezentuje, system rezerwacji pokoju sprawnie działa.</span>
+    </section>
+
+    <section class="galleries">
+        <video controls>
+            <source src="ss/hotel-second-all.mp4" type="video/mp4">
+        </video>
+        <video controls>
+            <source src="ss/hotel-rezerwacja.mp4" type="video/mp4">
+        </video>
+    </section>
+
+    <section class="skill-scnd">
+        <h3>Blog Tantros:</h3>
+
+        <span>Jest to strona WWW, gdzie każdy może stworzyć swojego bloga. Po rejestracji można się zalogować i dodawać swoje posty do bloga. W pełni działają funkcje edycji tekstu bloga; użyty został ReactQuill. Przy tworzeniu tego projektu wykorzystałam głównie bibliotekę React.js oraz CSS, HTML.</span>
+
+        <span>Wszystkie pliki projektu można znaleźć na stronie: <a href="http://github.com/trschrzn/blog-app">https://github.com/trschrzn/blog-app</a></span>
+
+        <h2>Poniżej galeria z projektu!</h2>
+    </section>
+
+    <section class="galleries">
+        <img src="ss/blog-main.jpg" alt="blog-main">
+        <video controls>
+            <source src="ss/blog-logowanie.mp4" type="video/mp4">
+        </video>
+        <img src="ss/blog-post.jpg" alt="blog-add-post">
+    </section>
+
+    <section class="skill-scnd">
+        <h3>Notes</h3>
+
+        <span>Prosta apka notesu typu listy Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam perspiciatis vitae incidunt dignissimos esse. Repudiandae quis odit earum velit molestiae?.</span>
+
+        <span>Wszystkie pliki projektu można znaleźć na stronie: <a href="http://github.com/trschrzn/list-app">https://github.com/trschrzn/list-app</a></span>
+
+        <h2>Poniżej galeria z projektu!</h2>
+    </section>
+
+    <section class="galleries">
+        <img src="ss/notes-main.jpg" alt="notes-main">
+        <img src="ss/notes-category.jpg" alt="notes-category">
+        <img src="ss/notes-category2.jpg" alt="notes-category2">
+        <img src="ss/notes-edit.jpg" alt="notes-edit">
+    </section>
+
+    <section class="end-skills" id="smallprojects">
+        <h3>Okej! Czas na mniejsze projekty!</h3>
+
+        <span>Na koniec przedstawiam swoje mniejsze projekty, głównie tworzone dzięki kursom, więc nie będziemy się nimi jakoś specjalnie przejmować. Głównie użyte zostały: HTML, CSS (SASS/LESS) oraz JavaScript.</span>
+
+        <div class="list">
+            <ul>
+                <li>Paint - proste rysowanie</li>
+                <li>Kalkulator</li>
+                <li>Gra wisielec</li>
+                <li>Gra memory</li>
+                <li>Gra kamień, papier, nożyce</li>
+                <li>Główna strona innego projektu</li>
+                <li>PHP - logowanie</li>
+                <li>PHP - rejestrowanie się do gry</li>
+                <li>Podstawy gry "osadnicy" - logowanie, wylogowywanie, rejestracja, dane użytkowników (ogólne dane typu hasło, email, jak i również np. ilość surowców, status VIP)</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="end-gallery">
+        <div class="row">
+              <img src="ss/paint.jpg" alt="Paint" onclick="myFunction(this);" class="image">
+              <img src="ss/memorygame-main.jpg" alt="memorygame" onclick="myFunction(this);" class="image">
+              <img src="ss/memorygame-play.jpg" alt="memorygame" onclick="myFunction(this);" class="image">
+              <img src="ss/memorygame-end.jpg" alt="memorygame" onclick="myFunction(this);" class="image">
+              <img src="ss/game-main.jpg" alt="game" onclick="myFunction(this);" class="image">
+              <img src="ss/game-play.jpg" alt="game" onclick="myFunction(this);" class="image">
+              <img src="ss/wisielec-main.jpg" alt="wisielec" onclick="myFunction(this);" class="image">
+              <img src="ss/wisielec-play.jpg" alt="wisielec" onclick="myFunction(this);" class="image">
+              <img src="ss/wisielec-win.jpg" alt="wisielec" onclick="myFunction(this);" class="image">
+              <img src="ss/wisielec-lose.jpg" alt="wisielec" onclick="myFunction(this);" class="image">
+              <img src="ss/paint.jpg" alt="wisielec" onclick="myFunction(this);" class="image">
+              <img src="ss/second.jpg" alt="wisielec" onclick="myFunction(this);" class="image">
+        </div>
+          
+        <div class="container">
+            <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+            <img id="expandedImg" style="width:100%">
+        </div>
+    </section>
+
+    <footer>
+        <a href="tel:+48609778592"><i class="icon-phone"></i></a>
+        <a href="mailto:teresachrzan120100@gmail.com"><i class="icon-mail-alt"></i></a>
+        <a href="http://github.com/trschrzn" target="_blank"><i class="icon-github-circled"></i></a>
+        <a id="link1" href="#"><i class="icon-home-1"></i></a>
+    </footer>
+
+    <script src="index.js"></script>
+    <script src="gallery.js"></script>  
+</body>
+</html>
